@@ -9,7 +9,9 @@ fock仓库以后，修改user_config.DS918+.json配置文件
 代码:
 
 >{
+>
 >  "extra_cmdline": {
+>  
 >    "vid": "0xABAB",
 >    "pid": "0xABAB",
 >    "sn": "125XXXX",
@@ -17,6 +19,7 @@ fock仓库以后，修改user_config.DS918+.json配置文件
 >    "mac1": "0011XXXX",
 >    "mac2": "0011XXXX"
 >    },
+>    
 >    "synoinfo": {
 >    "maxdisks" : "16",
 >    "internalportcfg" : "0xf006",
@@ -37,8 +40,12 @@ fock仓库以后，修改user_config.DS918+.json配置文件
 引导编译中在build-ds918-7.0.1.sh的
 # build redpill-load部分需要增加一行添加驱动指令（./ext-manager.sh add……那一行）：
 >  代码:
->  cd redpill-load
->  cp ${root}/user_config.DS918+.json ./user_config.json
->  ./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json
->  sudo ./build-loader.sh 'DS918+' '7.0.1-42218'
 >  
+>  cd redpill-load
+>  
+>  cp ${root}/user_config.DS918+.json ./user_config.json
+>  
+>  ./ext-manager.sh add https://raw.githubusercontent.com/jumkey/redpill-load/develop/redpill-acpid/rpext-index.json
+>  
+>  sudo ./build-loader.sh 'DS918+' '7.0.1-42218'
+>   
